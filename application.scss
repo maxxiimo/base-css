@@ -17,9 +17,14 @@
 /* RESETS
   ============================================================================ */
 @import "resets/normalize_h5bp_v101";
-// @import "resets/normalize";
 // @import "compass/reset";
+// @import "resets/normalize";
 // @import "resets/reset_meyer";
+
+// to counter normalize indentation of lists
+ol, ul {
+  padding-left: 0;
+}
 
 
 /* BASIC STRUCTURE
@@ -61,11 +66,6 @@
 
 /* APPLICATION - ad hoc code under this line
   ============================================================================ */
-
-// to counter normalize indentation of lists, prefer not to
-ol, ul {
-  padding-left: 0;
-}
 
 
 /* LAST
