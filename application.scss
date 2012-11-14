@@ -16,12 +16,13 @@
 
 /* RESETS
   ============================================================================ */
-@import "resets/normalize_h5bp_v101";
+@import "boilerplate/h5bp_normalize_v101";
 // @import "compass/reset";
-// @import "resets/normalize";
-// @import "resets/reset_meyer";
+// The following can be found at https://github.com/maxxiimo/base-resets.
+// @import "normalize";
+// @import "reset_meyer";
 
-// to counter normalize indentation of lists
+// To counter normalize indentation of lists.
 ol, ul {
   padding-left: 0;
 }
@@ -70,5 +71,5 @@ ol, ul {
 
 /* LAST
   ============================================================================ */
-@import "h5bp_helpers";
-@import "h5bp_print";
+@import "boilerplate/h5bp_helpers";
+@import "boilerplate/h5bp_print";
