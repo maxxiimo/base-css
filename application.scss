@@ -22,9 +22,10 @@
 // @import "normalize";
 // @import "reset_meyer";
 
-// To counter normalize indentation of lists.
+// To counter normalize indentation of lists, and reposition bullets.
 ol, ul {
   padding-left: 0;
+  list-style-position: inside;
 }
 
 
