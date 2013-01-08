@@ -23,6 +23,10 @@
     @media (min-width: 1400px)
       @content
 
+  @else if $point == retina
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      @content
+
 // Tests...
 // @include breakpoint(xxs)
 //   background-color: red
