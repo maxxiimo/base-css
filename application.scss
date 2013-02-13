@@ -23,7 +23,6 @@ ol, ul {
 /* BASIC STRUCTURE
   ============================================================================ */
 @import "desktop/layout";
-// @import "grids";
 
 
 /* TYPOGRAPHY
@@ -54,7 +53,7 @@ ol, ul {
 
 /* STAGING - new styles belong here !!!DO NOT INTEGRATE!!!
   ============================================================================ */
-@import "staging";
+@import "desktop/staging";
 
 
 /* APPLICATION - ad hoc code under this line
