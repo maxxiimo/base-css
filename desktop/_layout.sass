@@ -13,6 +13,7 @@ html
 body
   margin: 0 auto
   width: 960px
+  // width: 60em
   font-size: $base-font-size
   line-height: $base-line-height
   background: image-url("fixtures/XXX")
@@ -25,14 +26,18 @@ img
 /* Header
   -----------------------
 
+// navigation in _navigation.sass
+
 header
   height: 60px
+  // height: 3.75em
   margin-bottom: 10px
+  // margin-bottom: .625em
   background-color: $bg-header
 
 .logo
   float: left
-  margin: 10px 0 0 0
+  margin: .625em 0 0 0
 
 
 /* Footer
@@ -40,20 +45,24 @@ header
 
 footer
   height: 100px
+  // height: 6.25em
   margin-top: 30px
   ul
     margin-bottom: 5px
+    // margin-bottom: .3125em
     li
       display: inline-block
       padding: 0 10px
-      // font-size: 85%
+      // padding: 0 .625em
     li:first-child
       padding-left: 0
     .icons
       float: right
       margin-top: -5px
+      // margin-top: -.3125em
       padding: 0 0 0 5px
+      // padding: 0 0 0 .3125em
   p
     margin-top: 0
-    // font-size: 75%
-    // color: $font-gray
+    font-size: 75%
+    color: $font-gray
