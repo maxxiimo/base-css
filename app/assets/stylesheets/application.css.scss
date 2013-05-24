@@ -6,7 +6,6 @@
 /* MIXINS
   ============================================================================ */
 @import "compass";
-// @import "susy";
 // @import "media_queries";
 @import "mixins";
 
@@ -23,6 +22,7 @@ ol, ul {
 
 /* BASIC STRUCTURE
   ============================================================================ */
+@import "susy";
 @import "desktop/layout";
 
 
