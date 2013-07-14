@@ -1,66 +1,114 @@
-/* Highlighters
+/* Box Shadows
   -----------------------
 
-.highlighter
-  background-color: yellow
-
-::-moz-selection
-  background: $highlight
-  text-shadow: none
-
-::selection
-  background: $highlight
-  text-shadow: none
-
-
-/* Columns
-  -----------------------
-
-.cols li,
-.cols p
-  clear: both
-
-.col1, .col2, .col3, .col4, .col5
+.box-shadow-example-1,
+.box-shadow-example-2,
+.box-shadow-example-3,
+.box-shadow-example-4,
+.box-shadow-example-5,
+.box-shadow-example-6,
+.box-shadow-example-7
   float: left
-  display: block
+  margin-right: 30px
+  padding-top: 35px
+  width: 100px
+  height: 65px
+  text-align: center
+
+.box-shadow-example-1
+  // height: 7px
+  +background-image(linear-gradient(rgba(0, 0, 0, .05) 0%, transparent 100%))
+
+.box-shadow-example-2
+  +box-shadow(0 1px 3px rgba(0, 0, 0, 0.1))
+
+.box-shadow-example-3
+  +box-shadow(0 0 5px rgba(0, 0, 0, 0.15))
+
+.box-shadow-example-4
+  +box-shadow(0 1px 3px #aaa)
+
+.box-shadow-example-5
+  +box-shadow(0 0 10px 0 rgba(25, 25, 25, 0.25))
+
+.box-shadow-example-6
+  +box-shadow(0 0 10px rgba(0, 0, 0, 0.2))
+
+.box-shadow-example-7
+  +box-shadow(0 0 6px 1px rgba(0, 0, 0, 0.75))
+
+// .box-shadow-example-1 1
+// .box-shadow-example-2 2
+// .box-shadow-example-3 3
+// .box-shadow-example-4 4
+// .box-shadow-example-5 5
+// .box-shadow-example-6 6
+// .box-shadow-example-7 7
 
 
-/* Tables
+/* Page Curls
   -----------------------
 
-// to help tables remember to inherit
-
-table
-  font-size: inherit
-  font: 100%
-
-td
-  vertical-align: top
+.curl
+  border-radius: 0 0 120px 120px / 0 0 6px 6px
 
 
-/* Horizontal Rulers
+/* Arrows
   -----------------------
 
-hr
-  display: block
-  height: 1px
-  border: 0
-  border-top: 1px solid $ruler
-  margin: 1em 0
-  padding: 0
+.arrow-up
+  +arrow-up
 
-hr.spacer
-  background: $spacer
-  color: $spacer
-  border-top: 1px solid $spacer
-hr.sm
-  margin-bottom: .5em
-hr.med
-  margin-bottom: 1em
-hr.lg
-  margin-bottom: 2em
-hr.xlg
-  margin-bottom: 3em
+.arrow-down
+  +arrow-down
+
+.arrow-left
+  +arrow-left
+
+.arrow-right
+  +arrow-right
+
+.arrow-up-anchor
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    +arrow-up-anchor
+
+.arrow-down-anchor
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    +arrow-down-anchor
+
+.hero-down
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $white)
+
+.blurb-down
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    +arrow-down-anchor($arrow-color-1: lighten($blue-gray, 15), $arrow-color-2: $blue-gray)
+
+.manifesto-down
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    +arrow-down-anchor($arrow-color-1: $navy-blue, $arrow-color-2: $white)
+
+.quote-down
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $gray)
 
 
 /*  Alerts
@@ -133,11 +181,57 @@ $radius: 12px
 .avatar
   // border: 1px solid #999
   padding: 5px
-  box-shadow: 0 1px 3px #aaa
-  -moz-box-shadow: 0 1px 3px #aaa
-  -o-box-shadow: 0 1px 3px #aaa
-  -webkit-box-shadow: 0 1px 3px #aaa
-  -khtml-box-shadow: 0 1px 3px #aaa
+  +box-shadow(0 1px 3px #aaa)
+
+
+/* Columns
+  -----------------------
+
+.cols li,
+.cols p
+  clear: both
+
+.col1, .col2, .col3, .col4, .col5
+  float: left
+  display: block
+
+
+/* Tables
+  -----------------------
+
+// to help tables remember to inherit
+
+table
+  font-size: inherit
+  font: 100%
+
+td
+  vertical-align: top
+
+
+/* Horizontal Rulers
+  -----------------------
+
+hr
+  display: block
+  height: 1px
+  border: 0
+  border-top: 1px solid $ruler
+  margin: 1em 0
+  padding: 0
+
+hr.spacer
+  background: $spacer
+  color: $spacer
+  border-top: 1px solid $spacer
+hr.sm
+  margin-bottom: .5em
+hr.med
+  margin-bottom: 1em
+hr.lg
+  margin-bottom: 2em
+hr.xlg
+  margin-bottom: 3em
 
 
 /* Other
