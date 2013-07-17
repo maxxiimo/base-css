@@ -229,14 +229,14 @@
   border-bottom: $size solid transparent
   border-right: $size solid $color
 
+/* anchors
+
 @mixin arrow-details
   content: ""
   position: absolute
   top: -$arrow-size
   left: ($arrow-width / 2) - $arrow-size
   +text-shadow
-
-/* anchors
 
 @mixin arrow-up-anchor($arrow-color-1: $navy-blue, $arrow-color-2: lighten($navy-blue, 15))
   position: absolute
@@ -276,6 +276,40 @@
       +arrow-details
       +arrow-down($size: $arrow-size, $color: $arrow-color-2)
 
+// markup:
+//
+// %a{:href => '#manifesto', :title => 'Scroll Down', :class => 'example-down'} scroll
+//
+// styles:
+//
+// .example-down
+//   +arrow-down-anchor($arrow-color-1: blue, $arrow-color-2: gray)
+
+/* icon font arrow
+
+@mixin icon-arrow-down($arrow-color-1, $arrow-color-2, $font-size)
+  position: absolute
+  bottom: -20px
+  right: 0
+  +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
+  +opacity(.5)
+  &:hover
+    text-decoration: none
+  span
+    padding-right: 20px
+    font-size: $font-size
+
+// markup:
+//
+// %a{:href => '#tech-icons', :title => 'Scroll Down', :class => 'example-down'}
+//   %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+//   %span.screen-reader-text Scroll Down
+//
+// styles:
+//
+// .example-down
+//   +icon-arrow-down(gray, white, 4em)
+
 /* rotating triangle
 
 @mixin arrow-rotate($color1: $blue-gray, $color2: $gray)
@@ -293,12 +327,12 @@
 
 // markup:
 //
-// .triangle
+// .example
 //   %a:href => '#blurb', :title => 'Scroll Down' &#9698
 //
 // styles:
 //
-// .triangle
+// .example
 //   +arrow-rotate
 
 
