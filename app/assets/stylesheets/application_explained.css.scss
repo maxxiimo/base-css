@@ -2,7 +2,8 @@
   ============================================================================ */
 @import "define";
 
-// Use the "Definitions" section to set global variables for the entire project such as $base-font or $base-font-size.
+// Use the "Definitions" section to set global variables for the entire project
+// such as $base-font or $base-font-size.
 
 
 /* MIXINS
@@ -22,8 +23,12 @@ ol, ul {
   padding-left: 0;
 }
 
-// The granddaddy of all resets is Eric Meyer's "Reset CSS". Sometimes I use compass' reset utilities which are based on Eric Meyer's work, but my preference is to use Normalize.css through HTML5 boilerplate. You can find Eric Meyer's and both the original Normalize.css and HTML 5 Boilerplate's normalize styles here (a few converted to sass for you):
-
+// The granddaddy of all resets is Eric Meyer's "Reset CSS". Sometimes I use
+// compass' reset utilities which are based on Eric Meyer's work, but my preference
+// is to use Normalize.css through HTML5 boilerplate. You can find Eric Meyer's and
+// both the original Normalize.css and HTML 5 Boilerplate's normalize styles here
+// (a few converted to sass for you):
+//
 // - https://github.com/maxxiimo/base-resets
 
 
@@ -32,14 +37,17 @@ ol, ul {
 @import "susy";
 @import "desktop/layout";
 
-// Use the "Basic Structure" section to style major elements and component areas such as html and body tags, or header and footer areas.
+// Use the "Basic Structure" section to style major elements and component areas
+// such as html and body tags, or header and footer areas.
 
 
 /* TYPOGRAPHY
   ============================================================================ */
 @import "desktop/typography";
 
-Use the "Typography" section to style major typographical elements such as paragraphs, fonts, links, etc. These typographical styles are standard across all pages unless redefined in subsequent partials.
+// Use the "Typography" section to style major typographical elements such as
+// paragraphs, fonts, links, etc. These typographical styles are standard across
+// all pages unless redefined in subsequent partials.
 
 
 /* MISCELLANEOUS
@@ -47,14 +55,20 @@ Use the "Typography" section to style major typographical elements such as parag
 @import "misc";
 @import "sprites";
 
-// "Miscellaneous" is a catchall for miscellaneous partials and styles that should appear earlier on in the stylesheet. "misc" has an assortment of general helper styles; "sprites" obviously is for sprites, whether using Compass' built in sprite engine, or building them on your own.
+// "Miscellaneous" is a catchall for miscellaneous partials and styles that should
+// appear earlier on in the stylesheet. "misc" has an assortment of general helper
+// styles; "sprites" obviously is for sprites, whether using Compass' built in sprite
+// engine, or building them on your own.
 
 
 /* NAVIGATION
   ============================================================================ */
 @import "desktop/navigation";
 
-// "Navigation" could be part of another section, or even contained within another partial, however, experiences has proven that a lot of things can happen in navigation. Navigation styles can become quite large, and there can be more than one navigation design or user driven type.
+// "Navigation" could be part of another section, or even contained within another
+// partial, however, experiences has proven that a lot of things can happen in
+// navigation. Navigation styles can become quite large, and there can be more than
+// one navigation design or user driven type.
 
 
 /* FORMS
@@ -68,20 +82,29 @@ Use the "Typography" section to style major typographical elements such as parag
   ============================================================================ */
 @import "desktop/pages";
 
-// "Pages" will hold the bulk of your code, i.e. each page or functional area of your application. You can organize them all within one partial, separate them into their own partials, or a combination of this. I tend to add common functionality between pages in the root _pages.sass partial, then import more specific page partials into _pages.sass.
+// "Pages" will hold the bulk of your code, i.e. each page or functional area of
+// your application. You can organize them all within one partial, separate them
+// into their own partials, or a combination of this. I tend to add common
+// functionality between pages in the root _pages.sass partial, then import more
+// specific page partials into _pages.sass.
 
 
 /* STAGING - new styles belong here !!!DO NOT INTEGRATE!!!
   ============================================================================ */
 @import "desktop/staging";
 
-// The "staging" section is a staging area for code that need to be brought into the main stylesheets. It's designed to allow specific individual/s to be gatekeepers for code entering the main body of stylesheets. This ensures that stylesheets remain organized, DRY, follow the stylesheet standards, and at a bare minimum provide a form of quality control.
+// The "staging" section is a staging area for code that need to be brought into
+// the main stylesheets. It's designed to allow specific individual/s to be
+// gatekeepers for code entering the main body of stylesheets. This ensures that
+// stylesheets remain organized, DRY, follow the stylesheet standards, and at a
+// bare minimum provide a form of quality control.
 
 
 /* APPLICATION - ad hoc code under this line
   ============================================================================ */
 
-// "Application" could be a place for anything that did not fit in anywhere else and doesn't need to take precedence.
+// "Application" could be a place for anything that did not fit in anywhere else
+// and doesn't need to take precedence.
 
 
 /* LAST
