@@ -5,30 +5,23 @@
 
 // http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
 
-$arial:               Arial, "Helvetica Neue", Helvetica, sans-serif
-$helvetica:           "Helvetica Neue", "Helvetica", Arial, sans-serif
-$verdana:             Verdana, Geneva, Tahoma, sans-serif
-$geneva:              Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif
-$georgia:             Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif
+$arial:                Arial, "Helvetica Neue", Helvetica, sans-serif
+$helvetica:            "Helvetica Neue", "Helvetica", Arial, sans-serif
+$verdana:              Verdana, Geneva, Tahoma, sans-serif
+$geneva:               Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif
+$georgia:              Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif
+
+// typekit...
+
+
 
 // google web fonts...
 
 // http://designshack.net/articles/css/10-great-google-font-combinations-you-can-copy/
 // http://designshack.net/articles/typography/10-more-great-google-font-combinations-you-can-copy/
 
-// $cantata:             "Cantata One", Georgia, serif
-// $imprima:             Imprima, Verdana, Helvetica, sans-serif
-
-// $allerta:             Allerta, Helvetica, Arial, sans-serif
-// $crimson:             Crimson Text, Georgia, Times, serif
-
-// $arvo:                Arvo, Georgia, Times, serif
-// $pt-sans:             "PT Sans", Helvetica, Arial, sans-serif
-
-// $pt-serif:            "PT Serif", serif
-
-$droid-serif:         "Droid Serif", Georgia, Times, serif
-$droid-sans:          "Droid Sans", Helvetica, Arial, sans-serif
+$droid-serif:          "Droid Serif", Georgia, Times, serif
+$droid-sans:           "Droid Sans", Helvetica, Arial, sans-serif
 
 // embedded fonts...
 
@@ -39,26 +32,23 @@ $droid-sans:          "Droid Sans", Helvetica, Arial, sans-serif
 //   src: font-url('FONT_NAME.eot')
 //   src: font-url('FONT_NAME.eot?#iefix') format("embedded-opentype"), font-url('FONT_NAME.svg#FONT_NAME') format("svg"), font-url('FONT_NAME.woff') format("woff"), font-url('FONT_NAME.ttf') format("truetype")
 
-// typekit...
-
-
-
 // base definitions...
 
-$base-font-family:    $droid-sans       !default
-$base-font-size:      100%              !default
-$base-line-height:    1.4               !default
+$base-font-family:     $droid-sans       !default
+$base-font-size-alt:   1em               !default
+$base-line-height-alt: 1.4               !default
+$base-font-color:      #444              !default
 
 // font family...
 
-$font-family-header:  $droid-serif      !default
-$font-family-nav:     $droid-serif      !default
-$font-family-button:  $droid-serif      !default
+$font-family-header:   $droid-serif      !default
+$font-family-nav:      $droid-serif      !default
+$font-family-button:   $droid-serif      !default
 
 // non-google web fonts alternativ:
-// $font-family-header:  $georgia          !default
-// $font-family-nav:     $georgia          !default
-// $font-family-button:  $georgia          !default
+/ $font-family-header:   $georgia          !default
+/ $font-family-nav:      $georgia          !default
+/ $font-family-button:   $georgia          !default
 
 // icon fonts...
 
@@ -83,7 +73,7 @@ $color-3:           #7ecefd
 $color-4:           #fff6e5
 $color-5:           #ff7f66
 
-// background...
+// backgrounds...
 
 $bg-body:           #fff
 $bg-container:      #fff
@@ -93,16 +83,12 @@ $bg-footer:         #fff
 
 // fonts...
 
-$base-font-color:   #444         !default
-$color-header:      #222         !default
-
 $font-white:        #fff
 $font-gray:         #999
 $font-black:        #000
 
 // color palette alternative:
 // $base-font-color:   lighten($color-1, 10)  !default
-// $color-header:      $color-1               !default
 // $font-white:        #fff
 // $font-gray:         lighten($color-1, 40)
 
@@ -131,10 +117,8 @@ $color-button-font: $font-white
 
 // miscellaneous...
 
-$color-ruler:       #ddd
-$color-spacer:      #fff
 $color-highlight:   #00b5f1
-$color-border:      #c3c3c3
+$color-hr:          #c3c3c3
 
 // alerts...
 

@@ -3,14 +3,16 @@
 
 .ir
   background-color: transparent
+  background-repeat: no-repeat
   border: 0
-  overflow: hidden
-
-.ir:before
-  content: ""
+  direction: ltr
   display: block
-  width: 0
-  height: 150%
+  overflow: hidden
+  text-align: left
+  text-indent: -999em
+
+.ir br
+  display: none
 
 
 /* Icon Fonts
@@ -35,156 +37,6 @@
   right: -9999px
 
 
-/* Box Shadows
-  -----------------------
-
-.box-shadow-example-1,
-.box-shadow-example-2,
-.box-shadow-example-3,
-.box-shadow-example-4,
-.box-shadow-example-5,
-.box-shadow-example-6,
-.box-shadow-example-7
-  float: left
-  margin-right: 30px
-  padding-top: 35px
-  width: 100px
-  height: 65px
-  text-align: center
-
-.box-shadow-example-1
-  // height: 7px
-  +background-image(linear-gradient(rgba(0, 0, 0, .05) 0%, transparent 100%))
-
-.box-shadow-example-2
-  +box-shadow(0 1px 3px rgba(0, 0, 0, 0.1))
-
-.box-shadow-example-3
-  +box-shadow(0 0 5px rgba(0, 0, 0, 0.15))
-
-.box-shadow-example-4
-  +box-shadow(0 1px 3px #aaa)
-
-.box-shadow-example-5
-  +box-shadow(0 0 10px 0 rgba(25, 25, 25, 0.25))
-
-.box-shadow-example-6
-  +box-shadow(0 0 10px rgba(0, 0, 0, 0.2))
-
-.box-shadow-example-7
-  +box-shadow(0 0 6px 1px rgba(0, 0, 0, 0.75))
-
-// .box-shadow-example-1 1
-// .box-shadow-example-2 2
-// .box-shadow-example-3 3
-// .box-shadow-example-4 4
-// .box-shadow-example-5 5
-// .box-shadow-example-6 6
-// .box-shadow-example-7 7
-
-
-/* Page Curls
-  -----------------------
-
-.curl
-  border-radius: 0 0 120px 120px / 0 0 6px 6px
-
-
-/* Arrows
-  -----------------------
-
-.arrow-up
-  +arrow-up
-
-.arrow-down
-  +arrow-down
-
-.arrow-left
-  +arrow-left
-
-.arrow-right
-  +arrow-right
-
-
-/* Alerts
-  -----------------------
-
-.info, .success, .warning, .error, .alert
-  margin: 0 0 1.6em
-  padding: 1em 1em 1em 40px
-  background-repeat: no-repeat
-  background-position: 5px 5px
-  +border-radius(.3em)
-  h2
-    margin: 0 0 .3em
-    font-size: 1.2em
-  ul
-    margin: 0
-  li
-    font-size: 1em
-
-.info
-  color: $info-drk
-  background-color: $info-lgt
-  background-image: image-url('icons/alert-info.gif')
-  border: 2px solid $info-drk
-  h2
-    color: $info-drk
-
-.success
-  color: $success-drk
-  background-color: $success-lgt
-  background-image: image-url('icons/alert-success.gif')
-  border: 2px solid $success-drk
-  h2
-    color: $success-drk
-
-.warning
-  color: $warning-drk
-  background-color: $warning-lgt
-  background-image: image-url('icons/alert-warning.gif')
-  border: 2px solid $warning-drk
-  h2
-    color: $warning-drk
-
-.error
-  color: $error-drk
-  background-color: $error-lgt
-  background-image: image-url('icons/alert-error.gif')
-  border: 2px solid $error-drk
-  h2
-    color: $error-drk
-
-.alert
-  padding-left: 15px
-  border: 2px solid $success-drk
-  color: $success-drk
-  img
-    float: left
-    margin-right: 15px
-
-
-/* Avatars
-  -----------------------
-
-.avatar
-  // border: 1px solid #999
-  padding: 5px
-  +box-shadow(0 1px 3px #aaa)
-
-
-/* Columns
-  -----------------------
-
-.cols li,
-.cols p
-  clear: both
-
-.col1, .col2, .col3, .col4, .col5
-  float: left
-  display: block
-
-
 /* Tables
   -----------------------
 
@@ -198,29 +50,75 @@ td
   vertical-align: top
 
 
-/* Horizontal Rulers
+/* Horizontal Ruler
   -----------------------
 
 hr
   display: block
   height: 1px
   border: 0
-  border-top: 1px solid $color-ruler
+  border-top: 1px solid $color-hr
   margin: 1em 0
   padding: 0
 
-hr.spacer
-  background: $color-spacer
-  color: $color-spacer
-  border-top: 1px solid $color-spacer
-hr.sm
-  margin-bottom: .5em
-hr.med
-  margin-bottom: 1em
-hr.lg
-  margin-bottom: 2em
-hr.xlg
-  margin-bottom: 3em
+
+/* H5BP Helpers
+  -----------------------
+
+// Hide visually and from screen readers:
+
+.hidden 
+  display: none !important
+
+// Hide only visually, but have it available for screen readers:
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+
+.visuallyhidden 
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+// Extends the .visuallyhidden class to allow the element
+// to be focusable when navigated to via the keyboard:
+// https://www.drupal.org/node/897638
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus 
+  clip: auto
+  height: auto
+  margin: 0
+  overflow: visible
+  position: static
+  width: auto
+
+// Hide visually and from screen readers, but maintain layout
+
+.invisible 
+  visibility: hidden
+
+// Clearfix: contain floats
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    `contenteditable` attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that receive the `clearfix` class.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+
+.clearfix:before,
+.clearfix:after 
+  content: " "
+  display: table
+
+
+.clearfix:after 
+  clear: both
 
 
 /* Other
@@ -290,5 +188,11 @@ hr.xlg
 .nopad
   padding: 0 !important
 
+.nopad-bottom
+  padding-bottom: 0 !important
+
 .nomarg
   margin: 0 !important
+
+.nomarg-bottom
+  margin-bottom: 0 !important

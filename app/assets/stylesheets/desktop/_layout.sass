@@ -9,9 +9,9 @@
   -----------------------
 
 html
-  line-height: $base-line-height
+  line-height: $base-line-height-alt
   font-family: $base-font-family
-  font-size: $base-font-size
+  font-size: $base-font-size-alt
   color: $base-font-color
   /* This may cause problems in Firefox when combined with JS plugins (like modals or drag-and-drop UIs) that rely on viewport dimension calculations */
   overflow-y: scroll
@@ -22,6 +22,14 @@ body
   width: 960px
   background-color: $bg-body
 
+
+*, *:before, *:after
+  +box-sizing(border-box)
+
+
+/* Media
+  -----------------------
+
 audio,
 canvas,
 img,
@@ -29,8 +37,8 @@ svg,
 video
   vertical-align: middle
 
-*, *:before, *:after
-  +box-sizing(border-box)
+img
+  max-width: 100%
 
 
 /* Header

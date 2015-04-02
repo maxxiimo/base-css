@@ -1,6 +1,6 @@
 /* DEFINITIONS
   ============================================================================ */
-@import "modular_scale";
+// @import "modular_scale";
 @import "define";
 
 
@@ -15,9 +15,10 @@
   ============================================================================ */
 @import "boilerplate/h5bp_normalize_v301";
 
-// To counter normalize indentation of lists.
+// To counter normalize indentation of lists, and reposition bullets and numbers.
 ol, ul {
   padding-left: 0;
+  list-style-position: inside
 }
 
 
@@ -35,7 +36,8 @@ ol, ul {
 /* MISCELLANEOUS
   ============================================================================ */
 @import "misc";
-@import "sprites";
+@import "animations";
+// @import "sprites";
 
 
 /* NAVIGATION
