@@ -16,11 +16,12 @@
 
 /* RESETS
   ============================================================================ */
-@import "boilerplate/h5bp_normalize_v300";
+@import "boilerplate/h5bp_normalize_v302";
 
-// To counter normalize indentation of lists.
+// To counter normalize indentation of lists, and reposition bullets and numbers.
 ol, ul {
   padding-left: 0;
+  list-style-position: inside
 }
 
 // The granddaddy of all resets is Eric Meyer's "Reset CSS". Sometimes I use
@@ -53,12 +54,11 @@ ol, ul {
 /* MISCELLANEOUS
   ============================================================================ */
 @import "misc";
-@import "sprites";
+@import "animations";
 
 // "Miscellaneous" is a catchall for miscellaneous partials and styles that should
 // appear earlier on in the stylesheet. "misc" has an assortment of general helper
-// styles; "sprites" obviously is for sprites, whether using Compass' built in sprite
-// engine, or building them on your own.
+// styles; "animations" obviously is for animations that apply generally.
 
 
 /* NAVIGATION
@@ -66,7 +66,7 @@ ol, ul {
 @import "desktop/navigation";
 
 // "Navigation" could be part of another section, or even contained within another
-// partial, however, experiences has proven that a lot of things can happen in
+// partial, however, experiences has proven that a lot of styling can happen in
 // navigation. Navigation styles can become quite large, and there can be more than
 // one navigation design or user driven type.
 
@@ -84,7 +84,7 @@ ol, ul {
 
 // "Pages" will hold the bulk of your code, i.e. each page or functional area of
 // your application. You can organize them all within one partial, separate them
-// into their own partials, or a combination of this. I tend to add common
+// into their own partials, or a combination of both. I tend to add common
 // functionality between pages in the root _pages.sass partial, then import more
 // specific page partials into _pages.sass.
 
@@ -112,4 +112,4 @@ ol, ul {
 @import "boilerplate/h5bp_helpers";
 @import "boilerplate/h5bp_print";
 
-// "Last" is a reminder that those styles need to appear last.
+// "Last" is a reminder that those styles *need* to appear last.
