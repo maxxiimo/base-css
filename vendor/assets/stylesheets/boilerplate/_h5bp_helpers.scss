@@ -1,8 +1,8 @@
 /* ==========================================================================
-   Browse Happy prompt
+   Browser Upgrade Prompt
    ========================================================================== */
 
-.browsehappy {
+.browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
@@ -15,16 +15,16 @@
    ========================================================================== */
 
 /*
- * Hide visually and from screen readers: h5bp.com/u
+ * Hide visually and from screen readers:
  */
 
 .hidden {
     display: none !important;
-    visibility: hidden;
 }
 
 /*
- * Hide only visually, but have it available for screen readers: h5bp.com/v
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
 
 .visuallyhidden {
@@ -39,8 +39,9 @@
 }
 
 /*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
  */
 
 .visuallyhidden.focusable:active,
